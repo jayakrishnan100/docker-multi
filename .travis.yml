@@ -13,7 +13,7 @@ after_success:
   - docker build -t jay100/multi-nginx ./nginx
   - docker build -t jay100/multi-server ./server
   - docker build -t jay100/multi-worker ./worker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passoword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push jay100/multi-client
   - docker push jay100/multi-nginx
   - docker push jay100/multi-server
