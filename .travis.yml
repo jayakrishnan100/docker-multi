@@ -18,3 +18,17 @@ after_success:
   - docker push jay100/multi-nginx
   - docker push jay100/multi-server
   - docker push jay100/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-south-1
+  app: multi-docker
+  env: Multidocker-env
+  bucket_name: elasticbeanstalk-ap-south-1-142488468220
+  bucket_path: docker_multi
+  on: 
+    branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+  
