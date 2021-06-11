@@ -26,7 +26,7 @@
             "name" : "nginx",
             "image" : "jay100/multi-nginx",
             "hostname": "nginx",
-            "essential": false,
+            "essential": true,
             "portMappings": [{
                 "hostPort": 80,
                 "containerPort": 80
@@ -35,5 +35,4 @@
             "memory": 128
         }
     ]
-
 }
